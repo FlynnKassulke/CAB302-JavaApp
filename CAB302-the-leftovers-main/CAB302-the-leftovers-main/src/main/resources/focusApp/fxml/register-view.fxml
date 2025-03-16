@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="focusApp.controllers.LoginController">
+    <VBox alignment="TOP_CENTER" layoutX="53.0" prefHeight="600.0" prefWidth="284.0">
+
+        <!-- LOGO -->
+        <ImageView id="logoLarge" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+            <Image url="@../images/logoLarge.png" />
+        </ImageView>
+
+        <!-- REGISTER HEADINGS -->
+        <Label styleClass="headLabel" text="Create your account:" textAlignment="CENTER" wrapText="true" />
+        <Label styleClass="subheadLabel" text="Enter your details below to create an account and get started." textAlignment="CENTER" wrapText="true">
+            <padding>
+                <Insets bottom="30.0" />
+            </padding>
+        </Label>
+
+        <!-- REGISTER FIELDS -->
+        <VBox alignment="CENTER" spacing="10.0">
+
+            <!-- USERNAME -->
+            <TextField fx:id="regUserNameTextField" promptText="Username" styleClass="textBox" />
+
+            <!-- PASSWORD -->
+            <PasswordField fx:id="regPasswordTextField" promptText="Password" styleClass="textBox" />
+            <PasswordField fx:id="confirmPasswordTextField" promptText="Confirm Password" styleClass="textBox" />
+
+            <!-- DENY REGISTER -->
+            <Label fx:id="denyRegisterLabel" styleClass="warningLabel" textAlignment="RIGHT" wrapText="true" />
+
+            <!-- REGISTER BUTTONS -->
+            <HBox alignment="BOTTOM_CENTER" spacing="10.0">
+                <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClick" styleClass="smallSecondaryButton" text="Back" textAlignment="CENTER" />
+                <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClick" styleClass="smallPrimaryButton" text="Confirm" textAlignment="CENTER" />
+            </HBox>
+
+            <!-- LINK TO LOGIN -->
+            <Hyperlink fx:id="loginLink" onAction="#onLoginLinkClick" styleClass="linkLabel" text="Already have an account? Click here to login." textAlignment="CENTER" wrapText="true">
+                <padding>
+                    <Insets top="30.0" />
+                </padding>
+            </Hyperlink>
+         </VBox>
+    </VBox>
+</AnchorPane>

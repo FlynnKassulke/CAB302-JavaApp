@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="focusApp.controllers.TimerController">
+
+    <VBox fx:id="vBoxContainer" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- NAV BAR -->
+        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="390.0" styleClass="navBox">
+            <!-- Page Title -->
+            <Label styleClass="navLabel" text="Focus Timer" textAlignment="CENTER" />
+        </HBox>
+
+        <!-- TIMER VISUAL -->
+        <StackPane prefHeight="150.0" prefWidth="200.0">
+            <Group>
+                <Circle fill="#333333" radius="180.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="clockFace"/>
+                <Arc fill="TRANSPARENT" length="360.0" radiusX="175.0" radiusY="175.0" stroke="#868686" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="15.0" styleClass="arcBase"/>
+                <Arc fx:id="arc" centerX="175.0" centerY="100.0" fill="TRANSPARENT" layoutX="-175.0" layoutY="-100.0" length="360.0" radiusX="175.0" radiusY="175.0" startAngle="90.0" stroke="#1b81e0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" styleClass="arcMain"/>
+                <Arc fx:id="MiniArc" fill="#b8b8b880" length="360.0" radiusX="165.0" radiusY="165.0" startAngle="90.0" stroke="#a1a1a1fe" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" type="ROUND"/>
+
+                <HBox alignment="CENTER" layoutX="-127.0" layoutY="61.0" prefHeight="30.0" prefWidth="254.0" styleClass="TimerStatusBox" stylesheets="@../stylesheet.css">
+                    <effect>
+                        <InnerShadow blurType="GAUSSIAN" height="9.28" offsetX="1.0" offsetY="1.0" radius="4.8725000000000005" width="12.21"/>
+                    </effect>
+                    <Label fx:id="TimerStatus" alignment="CENTER" contentDisplay="CENTER" text="..." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <font>
+                            <Font name="System Bold" size="24.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="-155.0" layoutY="-44.0" styleClass="TimerStopwatch" stylesheets="@../stylesheet.css">
+                    <effect>
+                        <InnerShadow blurType="GAUSSIAN" height="9.28" offsetX="1.0" offsetY="1.0" radius="4.8725000000000005" width="12.21"/>
+                    </effect>
+                    <Label fx:id="StopWatch" alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="310.0" text="00:00:00" textAlignment="CENTER" textFill="WHITE" visible="false">
+                        <font>
+                            <Font size="60.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Group fx:id="DelayedGroup" layoutX="-155.0" layoutY="-45.0">
+                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="310.0" styleClass="DelayedStatus" text="Timer will start at:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <font>
+                            <Font name="System Bold" size="30.0"/>
+                        </font>
+                    </Label>
+                </Group>
+               <children>
+                  <Circle fill="#333333" radius="180.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="clockFace" />
+                  <Arc fill="TRANSPARENT" length="360.0" radiusX="175.0" radiusY="175.0" stroke="#868686" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="15.0" styleClass="arcBase" />
+                  <Arc fx:id="MainArc" centerX="175.0" centerY="100.0" fill="TRANSPARENT" layoutX="-175.0" layoutY="-100.0" length="360.0" radiusX="175.0" radiusY="175.0" startAngle="90.0" stroke="#1b81e0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" styleClass="arcMain" />
+                  <Arc fx:id="MiniArc" fill="#b8b8b880" length="360.0" radiusX="165.0" radiusY="165.0" startAngle="90.0" stroke="#a1a1a1fe" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+
+                    <HBox alignment="CENTER" layoutX="-127.0" layoutY="61.0" prefHeight="30.0" prefWidth="254.0" styleClass="TimerStatusBox" stylesheets="@../stylesheet.css">
+                     <children>
+                           <Label fx:id="TimerStatus" alignment="CENTER" contentDisplay="CENTER" text="..." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <InnerShadow blurType="GAUSSIAN" height="9.28" offsetX="1.0" offsetY="1.0" radius="4.8725000000000005" width="12.21" />
+                     </effect>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="-155.0" layoutY="-44.0" styleClass="TimerStopwatch" stylesheets="@../stylesheet.css">
+                     <children>
+
+                                 <Label fx:id="StopWatch" alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="310.0" text="00:00:00" textAlignment="CENTER" textFill="WHITE" visible="false">
+                           <font>
+                              <Font size="60.0" />
+                           </font>
+                           </Label>
+                     </children>
+                      <effect>
+                          <InnerShadow blurType="GAUSSIAN" height="9.28" offsetX="1.0" offsetY="1.0" radius="4.8725000000000005" width="12.21" />
+                      </effect>
+                  </HBox>
+                  <Group fx:id="DelayedGroup" layoutX="-155.0" layoutY="-45.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="310.0" styleClass="DelayedStatus" text="Timer will start at:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+        </StackPane>
+
+        <!-- BUTTON REMOTE -->
+        <VBox alignment="CENTER" spacing="2.0" styleClass="ButtonController" stylesheets="@../stylesheet.css">
+            <VBox.margin>
+                <Insets left="5.0" right="5.0"/>
+            </VBox.margin>
+            <HBox alignment="CENTER" prefHeight="14.0" prefWidth="370.0" spacing="2.0">
+
+                <!-- Pause -->
+                <Button fx:id="PauseButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="5.0" mnemonicParsing="false" onAction="#onPauseButtonClick" onMouseEntered="#mouseInPauseButton" onMouseExited="#mouseOutPauseButton" style="-fx-background-radius: 8px 0px 0px 0px;" styleClass="ButtonControlUpper" text="Pause">
+                   <graphic>
+                       <Label styleClass="ButtonControlIcon" text="⏸" textFill="WHITE">
+                           <font>
+                               <Font name="System Bold" size="1.0"/>
+                           </font>
+                       </Label>
+                   </graphic>
+                </Button>
+
+                <!-- Resume -->
+                <Button fx:id="ResumeButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="5.0" mnemonicParsing="false" onAction="#onResumeButtonClick" onMouseEntered="#mouseInResumeButton" onMouseExited="#mouseOutResumeButton" styleClass="ButtonControlUpper" text="Resume">
+                   <graphic>
+                       <Label styleClass="ButtonControlIcon" text="▶" textFill="WHITE">
+                           <font>
+                               <Font size="1.0"/>
+                           </font>
+                       </Label>
+                   </graphic>
+                </Button>
+
+                <!-- Stop -->
+                <Button fx:id="StopButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="5.0" mnemonicParsing="false" onAction="#onStopButtonClick" onMouseEntered="#mouseInStopButton" onMouseExited="#mouseOutStopButton" style="-fx-background-radius: 0px 8px 0px 0px;" styleClass="ButtonControlUpper" text="Stop">
+                   <graphic>
+                       <Label styleClass="ButtonControlIcon" text="⏹" textFill="WHITE"/>
+                   </graphic>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="0.0" spacing="2.0">
+
+                <!-- Restart -->
+                <Button fx:id="RestartButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="5.0" mnemonicParsing="false" onAction="#onRestartButtonClick" onMouseEntered="#mouseInRestartButton" onMouseExited="#mouseOutRestartButton" prefHeight="31.0" prefWidth="134.0" style="-fx-background-radius: 0px 0px 0px 8px;" styleClass="ButtonControlLower" text="Restart">
+                   <graphic>
+                       <Label styleClass="ButtonControlIcon" text="🔁" textFill="WHITE">
+                           <font>
+                               <Font size="1.0"/>
+                           </font>
+                       </Label>
+                   </graphic>
+                </Button>
+
+                <!-- Return -->
+                <Button fx:id="ReturnButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" graphicTextGap="5.0" mnemonicParsing="false" onAction="#onReturnButtonClick" onMouseEntered="#mouseInReturnButton" onMouseExited="#mouseOutReturnButton" prefHeight="31.0" prefWidth="178.0" style="-fx-background-radius: 0px 0px 8px 0px;" styleClass="ButtonControlLower" text="Return">
+                   <graphic>
+                       <Label styleClass="ButtonControlIcon" text="⬅" textFill="WHITE">
+                           <font>
+                               <Font size="1.0"/>
+                           </font>
+                       </Label>
+                   </graphic>
+                </Button>
+            </HBox>
+        </VBox>
+
+        <!-- Text to Speech Button -->
+        <HBox prefHeight="0.0" prefWidth="370.0" stylesheets="@../stylesheet.css">
+            <VBox.margin>
+                <Insets left="5.0" right="5.0"/>
+            </VBox.margin>
+            <ToggleButton fx:id="ToggleListen" mnemonicParsing="false" onAction="#onToggleListenClick" prefHeight="31.0" prefWidth="96.0" styleClass="ToggleListen" stylesheets="@../stylesheet.css" text="Listen">
+                <graphic>
+                    <Label styleClass="ButtonControlIcon" text=" 🔊"/>
+                </graphic>
+            </ToggleButton>
+        </HBox>
+    </VBox>
+</AnchorPane>

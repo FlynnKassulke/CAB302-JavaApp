@@ -1,0 +1,682 @@
+.root {
+
+    -PrimaryColour: #59ADFF;
+    -SecondaryColour: #2C6FDC;
+    -TertiaryColour: #8fc4d6;
+    -BackgroundColour: #E6F9FF;
+
+/*
+    -PrimaryColour: #59ADFF;
+    -SecondaryColour: #2C6FDC;
+    -TertiaryColour: #4382BF;
+    -BackgroundColour: #E6F9FF;
+*/
+
+
+    -PrimaryTextColour: #FFFFFF;
+    -SecondaryTextColour: #FFFFFF;
+    -TertiaryTextColour: #FFFFFF;
+    -BackgroundTextColour: #000000;
+
+    /* Temp */
+    -textBoxColor: #FFF;
+    -fx-background-color: -BackgroundColour;
+}
+
+/* Layout */
+.navBarMenuButton: hover{
+    -fx-background-color: -SecondaryColour
+}
+
+
+/* Menu Pane */
+.menuPane{
+    -fx-background-color: -TertiaryColour;
+}
+
+/* Confirmation */
+
+.blackOutPane{
+    -fx-background-color: #000000;
+    -fx-opacity: 0.5;
+}
+
+.confirmPane{
+    -fx-pref-width: 280px;
+    -fx-pref-height: 150px;
+    -fx-background-color: -BackgroundColour;
+    -fx-background-radius: 12px;
+
+    -fx-border-radius: 8px;
+    -fx-border-width: 5px;
+    -fx-border-color: -PrimaryColour;
+
+    -fx-text-fill: -BackgroundTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+
+/* Blocked Pane */
+.blockedPane{
+    -fx-border-color: -BackgroundTextColour;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 1px;
+    -fx-background-color: #FFFFFF;
+    -fx-cursor: hand;
+}
+
+.blockedPane:hover {
+    -fx-border-color: -SecondaryColour;
+    -fx-border-width: 3px;
+}
+
+
+/* Blocked Table */
+.blockedTableColumn{
+    -fx-alignment: center;
+    -fx-text-fill: #000000;
+    -fx-background-color: -textBoxColor;
+    -fx-border-color: transparent -SecondaryColour transparent -SecondaryColour;
+}
+
+.blockedTableView{
+    -fx-background-color: -PrimaryColour;
+}
+.blockedTableView .label{
+    -fx-text-fill: -PrimaryTextColour;
+}
+
+.blockedTableView .column-header {
+    -fx-border-color: -SecondaryColour;
+}
+.blockedTableView .column-header .label {
+    -fx-text-fill: #000000;
+}
+
+
+
+/* Labels */
+.label {
+    -fx-font-family: INTER;
+}
+
+.headLabel {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-line-spacing: -5px;
+    -fx-text-fill: -BackgroundTextColour;
+
+}
+
+.subheadLabel {
+    -fx-font-size: 14px;
+    -fx-text-fill: -BackgroundTextColour;
+}
+
+.bodyLabel {
+    -fx-font-size: 14px;
+    -fx-text-fill: -BackgroundTextColour;
+}
+.httpLabel{
+    -fx-background-color: -PrimaryColour;
+    -fx-border-color: -BackgroundTextColour;
+    -fx-border-radius: 8px 0px 0px 8px;
+    -fx-background-radius: 8px 0px 0px 8px;
+    -fx-border-width: 2px 0px 2px 2px;
+}
+.httpLabel .label{
+
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-size: 16px;
+
+}
+.httpTextBox {
+    -fx-font-size: 16px;
+    -fx-background-color: -textBoxColor;
+    -fx-prompt-text-fill: #414141;
+    -fx-border-color: -BackgroundTextColour;
+    -fx-background-radius:  0px 8px 8px 0px;
+    -fx-border-radius:  0px 8px 8px 0px;
+    -fx-border-width: 2px 2px 2px 0px;
+    -fx-font-weight: normal;
+}
+
+.warningLabel{
+    -fx-font-size: 14px;
+    -fx-text-fill: #FF0000;
+}
+
+
+
+
+
+.listLabel{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-line-spacing: -5px;
+    -fx-text-fill: #000000;
+}
+
+
+/* Hyper Link Label */
+.linkLabel{
+    -fx-font-size: 14px;
+    -fx-underline: false;
+    -fx-text-fill: -BackgroundTextColour;
+}
+
+.linkLabel:hover{
+    -fx-underline: true;
+}
+
+
+
+/* Text Fields */
+.textBox {
+    -fx-font-size: 16px;
+    -fx-background-color: -textBoxColor;
+    -fx-prompt-text-fill: #414141;
+    -fx-border-color: -BackgroundTextColour;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-font-weight: normal;
+}
+
+.addBox {
+    -fx-font-size: 14px;
+    -fx-background-color: #d3d3d3;
+    -fx-prompt-text-fill: #414141;
+}
+
+
+/* Sliders */
+.timerSlider .track{
+    -fx-background-color: -BackgroundTextColour;
+}
+
+.timerSlider .thumb{
+    -fx-border-radius: 1.0em;
+    -fx-border-width: 3px;
+    -fx-border-color: -BackgroundTextColour;
+    -fx-body-color: -PrimaryColour;
+}
+
+
+/* Menu */
+.navBox{
+    -fx-background-color: -PrimaryColour;
+}
+.navLabel {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -PrimaryTextColour;
+}
+.navButton{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-cursor: hand;
+}
+.navButton .label{
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-size: 35px;
+}
+.navButton: hover .label{
+    -fx-text-fill: -SecondaryTextColour;
+
+}
+.navButton: hover{
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+    -fx-cursor: hand;
+}
+.menuButton{
+    -fx-text-fill: -TertiaryTextColour;
+    -fx-background-color: transparent;
+
+    -fx-background-radius: 0px;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+.menuButton:hover {
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+}
+.menuLabel{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -TertiaryTextColour;
+}
+.menuButton:hover .label{
+    -fx-text-fill: -SecondaryTextColour;
+}
+.menuDropDownBox{
+    -fx-background-radius: 8px;
+    -fx-background-insets: 0px;
+    -fx-pref-height: 30px;
+    -fx-border-radius: 8px;
+    -fx-border-color: -TertiaryTextColour;
+    -fx-background-color: #FFFFFF;
+}
+.menuDropDownBox .label{
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.menuSlider .track{
+    -fx-background-color: -TertiaryTextColour;
+}
+
+.menuSlider .thumb{
+    -fx-border-radius: 1.0em;
+    -fx-border-width: 3px;
+    -fx-border-color: -TertiaryTextColour;
+    -fx-body-color: -PrimaryColour;
+}
+
+
+.accountButton {
+    -fx-background-color: transparent;
+}
+
+.defaultButton {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #FFF;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 1px;
+
+    -fx-border-radius: 8px;
+    -fx-border-color: -BackgroundTextColour;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+
+    -fx-cursor: hand;
+}
+
+.defaultButton:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.iconButton {
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #FFF;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 1px;
+
+    -fx-border-radius: 8px;
+    -fx-border-color: #000000;
+
+    -fx-cursor: hand;
+}
+
+.iconButton:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+
+
+
+/* Large Buttons*/
+.largePrimaryButton {
+    -fx-background-color: -PrimaryColour;
+    -fx-text-fill: -PrimaryTextColour;
+
+    -fx-pref-width: 256px;
+    -fx-pref-height: 50px;
+
+    -fx-background-radius: 8px;
+    -fx-background-insets: 1px;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+
+    -fx-cursor: hand;
+}
+
+.largePrimaryButton:hover {
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+}
+
+.largeSecondaryButton {
+    -fx-pref-width: 256px;
+    -fx-pref-height: 50px;
+    -fx-background-color: -SecondaryTextColour;
+    -fx-border-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryColour;
+
+
+    -fx-background-radius: 8px;
+    -fx-background-insets: 1px;
+
+    -fx-border-radius: 8px;
+    -fx-border-width: 3px;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+}
+
+.largeSecondaryButton:hover {
+    -fx-background-color: -SecondaryColour;
+    -fx-border-color: transparent;
+    -fx-text-fill: -SecondaryTextColour;
+}
+
+
+
+
+/* Small Buttons */
+.smallDefaultButton {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #FFF;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 1px;
+
+    -fx-border-radius: 8px;
+    -fx-border-color: #000000;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+
+    -fx-cursor: hand;
+}
+
+.smallDefaultButton:hover {
+    -fx-background-color: #F5F5F5;
+
+}
+
+.smallPrimaryButton {
+    -fx-background-color: -PrimaryColour;
+    -fx-text-fill: -PrimaryTextColour;
+
+    -fx-pref-width: 140px;
+    -fx-pref-height: 40px;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-width: 3px;
+    -fx-background-insets: 1px;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+
+    -fx-cursor: hand;
+}
+
+.smallPrimaryButton:hover {
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+}
+
+.smallSecondaryButton {
+    -fx-background-color: -SecondaryTextColour;
+    -fx-border-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryColour;
+
+    -fx-pref-width: 140px;
+    -fx-pref-height: 40px;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-width: 3px;
+    -fx-background-insets: 1px;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+
+    -fx-cursor: hand;
+}
+
+.smallSecondaryButton:hover {
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+
+}
+
+
+
+
+/*Timer Button Styles*/
+.arcBase{
+    -fx-stroke: -SecondaryColour;
+}
+.arcMain{
+    -fx-stroke: -PrimaryColour;
+}
+.clockFace{
+    -fx-fill: -TertiaryColour;
+}
+.ButtonControlUpper{
+    -fx-pref-height: 60px;
+    -fx-pref-width: 140px;
+    -fx-background-color: -PrimaryColour;
+    -fx-background-radius:  0px;
+
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+.ButtonControlUpper:hover, .ButtonControlLower:hover {
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+}
+.ButtonControlUpper:hover .label, .ButtonControlLower:hover .label{
+    -fx-text-fill: -SecondaryTextColour;
+}
+
+.ButtonControlLower {
+    -fx-pref-height: 60px;
+    -fx-pref-width: 200px;
+    -fx-background-color: -PrimaryColour;
+    -fx-background-radius:  0px;
+
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+
+.ButtonControlIcon {
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.TimerStatusBox, .TimerStopwatch{
+    -fx-background-color: -PrimaryColour;
+    -fx-background-radius:  8px;
+}
+.TimerStopwatch .label{
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 60px;
+}
+.TimerStatusBox .label{
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+}
+.DelayedStatus{
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+}
+
+.ToggleListen {
+    -fx-background-radius:  8px;
+    -fx-background-color:  -PrimaryColour;
+
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.ToggleListen: hover{
+     -fx-background-color:  -SecondaryColour;
+     -fx-text-fill: -SecondaryTextColour;
+}
+.ToggleListen: hover .label {
+    -fx-text-fill: -SecondaryTextColour;
+}
+
+.ToggleListen:selected {
+    -fx-background-color:  -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+}
+.ToggleListen:selected .label {
+    -fx-text-fill: -SecondaryTextColour;
+}
+
+/* Tiny Buttons */
+.tinyPrimaryButton{
+    -fx-pref-width: 80px;
+    -fx-background-color: -PrimaryColour;
+    -fx-background-radius: 8px;
+
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-border-color: -PrimaryColour;
+
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-insets: 1px;
+
+    -fx-cursor: hand;
+}
+
+.tinyPrimaryButton:hover {
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+    -fx-border-color: -SecondaryColour;
+}
+
+
+.tinySecondaryButton {
+    -fx-pref-width: 80px;
+    -fx-background-color: -SecondaryTextColour;
+    -fx-background-radius: 8px;
+
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-border-color: -SecondaryColour;
+    -fx-background-insets: 1px;
+
+    -fx-text-fill: -SecondaryColour;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+
+    -fx-cursor: hand;
+}
+
+.tinySecondaryButton:hover {
+    -fx-border-color: -SecondaryColour;
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+}
+
+.tinyXButton {
+    -fx-pref-width: 20px;
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px 5px 0px 0px;
+    -fx-text-fill: -BackgroundTextColour;
+
+
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+
+    -fx-cursor: hand;
+}
+
+.tinyXButton:hover {
+    -fx-background-color: #FF0000;
+    -fx-text-fill: #ffffff;
+}
+
+.tinyDefaultButton {
+    -fx-pref-width: 60px;
+    -fx-background-color: #FFF;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 1px;
+
+    -fx-border-radius: 8px;
+    -fx-border-color: #000000;
+
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+
+    -fx-cursor: hand;
+}
+
+.tinyDefaultButton:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+
+/* Toggle Buttons */
+.toggleButton .thumb{
+    -fx-border-radius: 1.0em;
+    -fx-border-color: -PrimaryTextColour;
+    -fx-body-color: -PrimaryColour;
+}
+
+.toggleButton .thumb-area {
+  -fx-background-color: -PrimaryTextColour;
+}
+
+.toggleButton:selected .thumb-area {
+     -fx-background-color: -PrimaryColour;
+ }
+
+/* Settings Buttons */
+.settingButton {
+    -fx-pref-width: 210px;
+    -fx-background-color: -PrimaryColour;
+    -fx-background-radius: 8px;
+    -fx-border-color: -PrimaryColour;
+    -fx-background-insets: 1px;
+    -fx-border-width: 2px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: -PrimaryTextColour;
+    -fx-border-radius: 8px;
+
+
+    -fx-cursor: hand;
+}
+.settingLabel{
+    -fx-font-size: 16px;
+    -fx-text-fill: -TertiaryTextColour;
+}
+.settingTextBox{
+    -fx-font-size: 16px;
+    -fx-background-color: -textBoxColor;
+    -fx-prompt-text-fill: #414141;
+    -fx-border-color: -TertiaryTextColour;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+
+.settingButton:hover {
+    -fx-background-color: -SecondaryColour;
+    -fx-text-fill: -SecondaryTextColour;
+    -fx-border-color: -TertiaryTextColour;
+    -fx-border-radius: 8px;
+}
+
+
+
+
+
+

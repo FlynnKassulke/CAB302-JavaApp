@@ -1,0 +1,9 @@
+module:focusApp
+focusApp
+focusApp.controllers
+focusApp.database
+focusApp.models.block
+focusApp.models.colour
+focusApp.models.preset
+focusApp.models.timer
+focusApp.models.user

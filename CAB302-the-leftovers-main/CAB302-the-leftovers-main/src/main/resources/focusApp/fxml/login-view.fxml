@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="focusApp.controllers.LoginController">
+    <VBox alignment="TOP_CENTER" layoutX="53.0" prefHeight="600.0" prefWidth="284.0">
+
+        <!-- LOGO -->
+        <ImageView id="logoLarge" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+            <Image url="@../images/logoLarge.png" />
+        </ImageView>
+
+        <!-- LOGIN HEADINGS -->
+        <Label styleClass="headLabel" text="Login to your account:" textAlignment="CENTER" wrapText="true" />
+        <Label styleClass="subheadLabel" text="Enter your details below to log back into your account." textAlignment="CENTER" wrapText="true">
+            <padding>
+                <Insets bottom="30.0" />
+            </padding>
+        </Label>
+
+        <!-- LOGIN FIELDS -->
+        <VBox alignment="CENTER" spacing="10.0">
+
+            <!-- USERNAME -->
+            <TextField fx:id="userNameTextField" promptText="Username" styleClass="textBox" />
+
+            <!-- PASSWORD -->
+            <PasswordField fx:id="passwordTextField" promptText="Password" styleClass="textBox" />
+
+            <!-- DENY LOGIN -->
+            <Label fx:id="denyLoginLabel" styleClass="warningLabel" textAlignment="RIGHT" wrapText="true" />
+
+            <!-- LOGIN BUTTONS -->
+            <HBox alignment="CENTER" spacing="10.0">
+                <Button fx:id="backButton" alignment="CENTER" cancelButton="true" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="40.0" prefWidth="140.0" styleClass="smallSecondaryButton" text="Back" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Button>
+                <Button fx:id="loginButton" defaultButton="true" mnemonicParsing="false" onAction="#onLoginButtonClick" styleClass="smallPrimaryButton" text="Login" textAlignment="CENTER" />
+            </HBox>
+
+            <!-- LINK TO REGISTER -->
+            <Hyperlink fx:id="regLink" onAction="#onRegisterLinkClick" prefHeight="28.0" prefWidth="276.0" styleClass="linkLabel" text="Don't have an account? Click here to signup." textAlignment="CENTER" textFill="#b7b6bf" wrapText="true">
+                <padding>
+                    <Insets top="30.0" />
+                </padding>
+            </Hyperlink>
+        </VBox>
+    </VBox>
+</AnchorPane>
